@@ -100,3 +100,6 @@ Headers:
 
 Query:
 {"streamId": "61cbdb09c87805b5882d75ec"}
+
+
+https://stream-me-next-app-az.herokuapp.com/
