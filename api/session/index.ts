@@ -7,7 +7,7 @@ export default async function createSession() {
   }
 
   await mongoose
-    .connect(MONGO_URL, { serverSelectionTimeoutMS: 60000 })
+    .connect(MONGO_URL)
     .then(() => {
       console.log(
         "Connected to Distribution API Database - Initial Connection"
