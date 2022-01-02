@@ -1,0 +1,102 @@
+mutation SignUp($email:String!, $password: String!){
+  register(input: {email:$email, password:$password}){
+    user{
+      _id,
+      email
+    },
+    token
+  }
+}# 
+
+Query:
+{"email":"alice@gmail.com", "password": "password"}
+
+-----------------------------------------------
+mutation AddStream($input: StreamInput!){
+  addStream(input: $input) {
+    _id,
+    title,
+    description,
+    url
+  }
+}
+
+
+Headers:
+{"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxY2JkNTUyYzg3ODA1YjU4ODJkNzVlNCIsImlhdCI6MTY0MDc0ODM3MH0.PnDWjAFJtBdn-1Iu51cp_GyZDyE-3LMK_nftkUEF1_g"}
+
+Query: 
+{"input": {"title": "Hello Stream", "description": "Welcome to my Stream", "url": "youtube.com"}}
+
+
+-------------------------------------------------------------------------------------
+mutation EditStream($input:StreamInput!){
+  editStream(input:$input) {
+    _id,
+    title,
+    description,
+    url
+  }
+}
+
+Headers:
+{"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxY2JkNTUyYzg3ODA1YjU4ODJkNzVlNCIsImlhdCI6MTY0MDc0ODM3MH0.PnDWjAFJtBdn-1Iu51cp_GyZDyE-3LMK_nftkUEF1_g"}
+
+Query:
+{"input": {"id": "61cbd741c87805b5882d75e6", "title": "Hello Stream!", "description": "hello", "url": "youtube.com"}}
+
+------------------------------------------------------------------------
+mutation DeleteStream($id: ObjectId!){
+  deleteStream(streamId: $id)
+}
+
+Headers:
+{"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxY2JkNTUyYzg3ODA1YjU4ODJkNzVlNCIsImlhdCI6MTY0MDc0ODM3MH0.PnDWjAFJtBdn-1Iu51cp_GyZDyE-3LMK_nftkUEF1_g"}
+
+Query:
+{"id": "61cbd741c87805b5882d75e6"}
+
+
+------------------------------------------------------------------------
+query CurrentUser{
+  currentUser{
+    _id,
+    email
+  }
+}
+
+Headers:
+{"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxY2JkNTUyYzg3ODA1YjU4ODJkNzVlNCIsImlhdCI6MTY0MDc0ODM3MH0.PnDWjAFJtBdn-1Iu51cp_GyZDyE-3LMK_nftkUEF1_g"}
+
+------------------------------------------------------------------------
+query Streams {
+  streams{
+    _id,
+    title,
+    description,
+    url
+  }
+}
+
+Headers:
+{"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxY2JkNTUyYzg3ODA1YjU4ODJkNzVlNCIsImlhdCI6MTY0MDc0ODM3MH0.PnDWjAFJtBdn-1Iu51cp_GyZDyE-3LMK_nftkUEF1_g"}
+
+------------------------------------------------------------------------
+query Stream($streamId: ObjectId!){
+  stream(streamId:$streamId) {
+    _id,
+    title,
+    description,
+    url,
+    author{
+      _id,
+      email
+    }
+  }
+}
+
+Headers:
+{"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxY2JkNTUyYzg3ODA1YjU4ODJkNzVlNCIsImlhdCI6MTY0MDc0ODM3MH0.PnDWjAFJtBdn-1Iu51cp_GyZDyE-3LMK_nftkUEF1_g"}
+
+Query:
+{"streamId": "61cbdb09c87805b5882d75ec"}
