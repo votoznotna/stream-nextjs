@@ -1,12 +1,19 @@
-# Stream-me
+# Stream-NodeJS
 
-Stream-me is a Next.js sample Web App with ReactJS as UI and GraphQLand MongoDB on server side.
+NextJS sample Web App with ReactJS as UI and GraphQLand MongoDB on server side.
 
 ## Demo
 
-```python
+```
 https://stream-me-next-app-az.herokuapp.com/
 
 testing uname/pwd: alice@gmail.com/password
+
+```
+
+## Usage
+
+```
+Create .env file to the root of /api sub-project and add MONGO_URL with valid url Atlas DB value
 
 ```
