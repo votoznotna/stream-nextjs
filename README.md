@@ -1,6 +1,6 @@
 # Stream-NodeJS
 
-NextJS sample Web App with ReactJS as UI and GraphQLand MongoDB on server side.
+NextJS sample Web App with ReactJS as UI and GraphQL and MongoDB on server side.
 
 ## Demo
 
