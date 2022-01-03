@@ -1,4 +1,4 @@
-# Stream-NodeJS
+# Stream-NextJS
 
 NextJS sample Web App with ReactJS as UI and GraphQL and MongoDB on server side.
 
