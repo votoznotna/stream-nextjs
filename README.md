@@ -6,9 +6,6 @@ NextJS sample Web App with ReactJS as UI and GraphQL and MongoDB on server side.
 
 ```
 https://stream-me-next-app-az.herokuapp.com/
-
-testing uname/pwd: alice@gmail.com/password
-
 ```
 
 ## Usage
@@ -21,5 +18,4 @@ Go [root project folder]/api, run "npm install"
 Go [root project folder]/app, run "npm install"
 Go back to root project folder and run "yarn install"
 Run "npm run dev" for local running
-
 ```
