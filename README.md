@@ -2,7 +2,7 @@
 
 Stream-me is a Next.js sample Web App with ReactJS as UI and GraphQLand MongoDB on server side.
 
-## Usage
+## Demo
 
 ```python
 https://stream-me-next-app-az.herokuapp.com/
